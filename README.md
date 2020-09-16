@@ -3,23 +3,15 @@
 
 ### Regras da certificação.
 
-[x] É obrigatório o uso de Page Objects.
-
-[x] É obrigatório que seu projeto rode em mais de um browser.
-
-[x] Você pode fazer isso da maneira que achar melhor usando grid, selenium-docker ou selenoid.
-
-[x] Essa parte você pode documentar no seu README, caso não consiga reproduzir em código
-
-[x] Independente da tecnologia que escolher para automatizar os arquivos de cada funcionalidade deve estar isolados. Por exemplo:
-
-[x]  login.py
-
-[x]  cadastro.py
-
-[x]  todo.py
-
-[x]  movimentacao_de_cartoes.py
+- [x] É obrigatório o uso de Page Objects.
+- [x] É obrigatório que seu projeto rode em mais de um browser.
+- [x] Você pode fazer isso da maneira que achar melhor usando grid, selenium-docker ou selenoid.
+- [x] Essa parte você pode documentar no seu README, caso não consiga reproduzir em código
+- [x] Independente da tecnologia que escolher para automatizar os arquivos de cada funcionalidade deve estar isolados. Por exemplo:
+- [x]  login.py
+- [x]  cadastro.py
+- [x]  todo.py
+- [x]  movimentacao_de_cartoes.py
 
 
 ### Ambiente que foi testado.
