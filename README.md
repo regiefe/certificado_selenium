@@ -93,7 +93,7 @@ python cadastro.py
 python todo.py 
 ```
 
-### Para cadastrar um todo
+### Para movimentar os cards
 ```
 python movimento_de_cartoes.py
 ```
