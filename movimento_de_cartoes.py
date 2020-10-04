@@ -7,10 +7,10 @@ login = {
     "senha": "123"
 }
 
-page = Login(browser[1],'http://todo-brython.herokuapp.com/')
+page = Login(browser[0],'http://todo-brython.herokuapp.com/')
 page.logando(login)
-# page.limpa_cards()
 
 page.afazer()
 page.fazendo()
 page.pronto()
+page.limpa_cards()

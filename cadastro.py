@@ -3,8 +3,6 @@ from element import Element
 browser = ['chrome', 'firefox']
 
 class Cadastro(Element):
-	       """Recebe uma lista onde a chave correspondente ao nome do elemento e os valores dos campos da pagina."""
-
     def cadastrando(self, cadastro):
 
         self.browser.find_element_by_xpath('//a[text()="#cadastro"]').click()

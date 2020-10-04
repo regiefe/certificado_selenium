@@ -2,11 +2,10 @@ from selenium.webdriver import Remote
 from time import sleep
 
 class Element:
-    """Elementos da pagina testada."""
 
     def __init__(self, browser, url):
-        """Tem que passar um navegador e uma URL base para instanciar a Classe."""
 
+        print('Carregando o selenium ... \n')
         self.browser = browser
         self.url = url
 
@@ -16,19 +15,7 @@ class Element:
         self.browser.get(self.url)
 
 
-    def limpa_cards(self):
-        """Cancela todos os cartoes existente."""
-
-        sleep(5)
-        cards = self.browser.find_elements_by_class_name('terminal-card')
-        for card in  cards:
-            card.find_element_by_class_name('cancel').click()
-
     def cria(self, dados):
-        """
-            Cria uma nova tarefa. 
-            Recebe uma lista onde a chave correspondente ao nome do elemento e os valores dos campos da pagina.
-        """
 
         sleep(5)
         self.limpa_cards()
@@ -38,20 +25,33 @@ class Element:
         self.browser.find_element_by_class_name('btn-primary').click()
 
     def afazer(self):
-            """Desloca o cartão para fazendo."""
 
+        print('Aguardando sistema .... \n')
         sleep(5)
-        cards = self.browser.find_element_by_class_name('terminal-card')
-        cards.find_element_by_class_name('do').click()
+        print('Movendo para fazer todos tarefas  \n')
+        cards = self.browser.find_elements_by_class_name('terminal-card')
+        for card in  cards:
+            card.find_element_by_class_name('do').click()
 
     def fazendo(self):
-               """Desloca o cartão para Feito."""
 
-        cards = self.browser.find_element_by_class_name('terminal-card')
-        cards.find_element_by_class_name('do').click()
+        print('Movendo para tarefas prontas  \n')
+        cards = self.browser.find_elements_by_class_name('terminal-card')
+        for card in  cards:
+            card.find_element_by_class_name('do').click()
 
     def pronto(self):
-               """Desloca o cartão desloca o cartao devolta para a fazer."""
 
-        cards = self.browser.find_element_by_class_name('terminal-card')
-        cards.find_element_by_class_name('do').click()
+        print('Refazendo todas as tarefas  \n')
+        cards = self.browser.find_elements_by_class_name('terminal-card')
+        for card in  cards:
+            card.find_element_by_class_name('do').click()
+
+    def limpa_cards(self):
+        
+        print('Aguardando sistema .... \n')
+        sleep(5)
+        print('Apagando todas as tarefas  \n')
+        cards = self.browser.find_elements_by_class_name('terminal-card')
+        for card in  cards:
+            card.find_element_by_class_name('cancel').click()

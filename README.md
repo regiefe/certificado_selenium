@@ -82,4 +82,18 @@ java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -de
 ```
 java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444
 ```
+
+### Cadastro de usuario
+```
+python cadastro.py 
+```
  
+### Para cadastrar um todo
+```
+python todo.py 
+```
+
+### Para cadastrar um todo
+```
+python movimento_de_cartoes.py
+```
